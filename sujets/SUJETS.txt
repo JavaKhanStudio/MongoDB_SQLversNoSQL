@@ -1,0 +1,63 @@
+
+  SQL VERS NOSQL — TROIS BASES A TRANSFORMER
+
+  Le meme exercice, trois fois, sur trois domaines. Chaque sujet part d'un
+  schema SQL complet et charge, et demande le modele document qui lui
+  correspond. Les trois sont independants : les prendre dans l'ordre qu'on
+  veut, s'arreter apres un seul si on veut.
+
+
+  1  DUNE                                      make dune
+     L'exploitation de l'epice sur Arrakis.
+     9 tables, 42 colonnes, 10 cles etrangeres.
+     Ce qu'on y apprend : le document POLYMORPHE. Une collecte reussie et
+     une collecte echouee ne portent pas les memes informations, et SQL
+     les range pourtant dans la meme table — sept colonnes NULL une ligne
+     sur trois.
+     Aussi : le 1:N borne contre le 1:N illimite, la liaison M:N sans
+     attribut, la copie assumee d'un petit referentiel.
+
+  2  LES TORTUES                               make tortues
+     Le projet fil rouge du cours, pris a l'envers : les 139 tortues que
+     vous avez deja chargees en Mongo, mais normalisees jusqu'au bout.
+     13 tables, 46 colonnes, 14 cles etrangeres.
+     Ce qu'on y apprend : le CHEMIN INVERSE. Ce qui etait recopie dans le
+     document est ici une table ; il faut decider quoi recopier a nouveau,
+     et savoir dire pourquoi.
+     Aussi : la table 1:1, la liaison M:N AVEC attribut, la hierarchie a
+     trois etages habitat > site > observation, et les trous du jeu reel.
+
+  3  LES BATEAUX                               make bateaux
+     Civils et militaires, les ports, les quais, les escales.
+     12 tables, 47 colonnes, 13 cles etrangeres.
+     Ce qu'on y apprend : l'HERITAGE. Un bateau est civil ou militaire,
+     les deux ne portent pas les memes colonnes, et SQL n'a que de
+     mauvaises reponses — trois tables, ou une table pleine de NULL.
+     Aussi : une regle metier qui croise deux tables et qu'aucun CHECK ne
+     sait garder, le journal non borne, la liaison M:N historicisee.
+
+
+  POUR CHAQUE SUJET
+
+     make <sujet>              (re)cree la base SQL et la remplit
+     make <sujet>-schema       les tables, leurs colonnes, leurs relations,
+                               et le pourcentage de NULL de chaque colonne
+     make <sujet>-controle     six series de chiffres. Ils sont vrais sur le
+                               SQL ; ils doivent rester vrais sur les
+                               documents. C'est le test.
+     make <sujet>-sql          un psql sur la base
+     make mongo                un mongosh sur le serveur d'arrivee
+
+     La correction existe, sur une branche a elle. Quand la votre sera
+     faite, et pas avant :
+
+     git switch correction     puis make <sujet>-verifier : les six
+                               chiffres reposes a MongoDB, OK ou KO
+                               ligne par ligne
+     git switch main           revenir au sujet seul
+
+     L'enonce complet, avec le schema commente et les exercices :
+        sujets/1-dune/SUJET.md
+        sujets/2-tortues/SUJET.md
+        sujets/3-bateaux/SUJET.md
+

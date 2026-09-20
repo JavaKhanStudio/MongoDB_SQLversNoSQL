@@ -1,0 +1,10 @@
+# Ce dossier est aussi une planche Atelier (tableau #sqlnosql). Ces deux dossiers
+# appartiennent a la planche, pas au projet, et ne sont jamais publies :
+#   .atelier/  — packs.toml, le texte du contexte de l'etiquette #sqlnosql
+#   .claude/   — des liens symboliques vers ~/Documents/GitHub/atelier/skills/
+# Ne pas les deplacer : atelier/projects/sqlnosql.toml pointe dessus (root, packs).
+.atelier/
+.claude/
+
+# L'outillage qui reste a la maison : rien de interne/ ne part chez les eleves.
+interne/

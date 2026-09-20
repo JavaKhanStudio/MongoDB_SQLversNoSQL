@@ -1,0 +1,47 @@
+name: sqlnosql
+
+# Les deux moteurs du projet : le SQL de depart, le MongoDB d'arrivee.
+# Le depot est monte en /projet dans les deux conteneurs : les .sql et les .js
+# se jouent sans copier de fichier.
+
+services:
+
+  postgres:
+    image: postgres:16
+    container_name: sqlnosql-postgres
+    environment:
+      POSTGRES_PASSWORD: epice
+      POSTGRES_USER: postgres
+    ports:
+      - "55432:5432"
+    volumes:
+      - ../:/projet:z
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  mongo:
+    image: mongo:8.0
+    container_name: sqlnosql-mongo
+    environment:
+      # MongoDB 8 refuse de demarrer sur un noyau >= 6.19 (SERVER-121912).
+      # Meme contournement que MongoDB_ACID.
+      GLIBC_TUNABLES: glibc.pthread.rseq=1
+    ports:
+      - "27041:27017"
+    volumes:
+      - ../:/projet:z
+      - mongodata:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+volumes:
+  pgdata:
+  mongodata:
