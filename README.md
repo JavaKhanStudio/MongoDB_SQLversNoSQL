@@ -137,7 +137,6 @@ sujets/<n>-<sujet>/
     controle.sql            les six chiffres de reference
     correction.js           LA CORRECTION : le modele document, et les six
                             questions reposees a MongoDB (branche correction)
-sujets/2-tortues/generer.py fabrique donnees.sql depuis ~/Documents/GitHub/MongoDB_Tortues
 ```
 
 `make arreter` conserve les données, `make purger` efface les volumes.
@@ -153,4 +152,4 @@ sujets/2-tortues/generer.py fabrique donnees.sql depuis ~/Documents/GitHub/Mongo
 | `pg_stat_user_tables.n_live_tup` est une estimation. Pour un compte exact et générique, `query_to_xml` sur un `count(*)` formaté. | `Makefile`, `sujets/relations.sql` |
 | `mongosh` n'a pas de `cat()` comme l'ancien shell : pour lire un fichier depuis un script, c'est `require("fs").readFileSync`. Une variable declaree par `--eval 'const X = 1'` est bien visible du `--file` qui suit. | `sujets/verifier.js`, `Makefile` |
 | `docker exec` **sans `-i`** ne transmet pas son entrée standard : le `cat > fichier` du bout de tuyau reçoit du vide, sans erreur. | `Makefile` |
-| Les données du sujet 2 ne sont pas inventées : `generer.py` les lit dans `MongoDB_Tortues`, donc les étudiants retrouvent les tortues qu'ils ont déjà chargées pour la section « Indexing ». Les trous du jeu réel (une tortue sans habitat, deux jamais observées) sont conservés exprès. | `sujets/2-tortues/generer.py` |
+| Les données du sujet 2 ne sont pas inventées : elles sont tirées du jeu `MongoDB_Tortues` du cours, donc les étudiants retrouvent les tortues qu'ils ont déjà chargées pour la section « Indexing ». Les trous du jeu réel (une tortue sans habitat, deux jamais observées) sont conservés exprès. Le script qui a fabriqué `donnees.sql` ne fait pas partie du dépôt : il lit un jeu de données qui n'y est pas, et le relancer décalerait les six chiffres de contrôle, qui sont le test du sujet. | `sujets/2-tortues/donnees.sql` |
