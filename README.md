@@ -7,6 +7,23 @@
 
 ---
 
+## Récupérer le projet
+
+```bash
+git clone https://github.com/JavaKhanStudio/MongoDB_SQLversNoSQL.git
+cd MongoDB_SQLversNoSQL
+```
+
+La correction n'est pas sur cette branche. Elle vit sur la branche `correction`,
+qu'il faut aller chercher à la main — c'est voulu :
+
+```bash
+git switch correction    # ajoute les corrections et `make <sujet>-verifier`
+git switch main          # les retire de nouveau
+```
+
+---
+
 ## Démarrage
 
 ```bash
