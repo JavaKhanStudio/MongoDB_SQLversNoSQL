@@ -17,7 +17,7 @@
 - Le DDL : [`schema.sql`](schema.sql) · les données : [`donnees.sql`](donnees.sql),
   tirées du jeu de données `MongoDB_Tortues` du cours et remises au propre
 - Le même domaine en Spring, JPA d'un côté et Spring Data Mongo de l'autre :
-  `~/Documents/GitHub/Spring_MongoDB_VsSQL`
+  [Spring_MongoDB_Vs_SQL](https://github.com/JavaKhanStudio/Spring_MongoDB_Vs_SQL)
 
 ---
 
