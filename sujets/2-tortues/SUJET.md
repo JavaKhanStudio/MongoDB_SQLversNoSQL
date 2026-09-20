@@ -15,7 +15,7 @@
 - La correction, quand la vôtre sera faite : `git switch correction`,
   puis `make tortues-verifier` — elle repose les six chiffres à MongoDB
 - Le DDL : [`schema.sql`](schema.sql) · les données : [`donnees.sql`](donnees.sql),
-  fabriquées par [`generer.py`](generer.py) depuis `~/Documents/GitHub/MongoDB_Tortues`
+  tirées du jeu de données `MongoDB_Tortues` du cours et remises au propre
 - Le même domaine en Spring, JPA d'un côté et Spring Data Mongo de l'autre :
   `~/Documents/GitHub/Spring_MongoDB_VsSQL`
 

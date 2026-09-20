@@ -1,8 +1,9 @@
 -- =====================================================================
 --  DB 2 — Les tortues : le jeu de donnees
---  GENERE par sujets/2-tortues/generer.py depuis MongoDB_Tortues.
---  Ne pas editer a la main : relancer le script.
---  Genere le 2026-09-20.
+--  GENERE le 2026-09-20 depuis le jeu de donnees MongoDB_Tortues du cours.
+--  Le script qui l'a fabrique ne fait pas partie du depot.
+--  NE PAS REGENERER ce fichier : les six chiffres de `make tortues-controle`
+--  sont le test du sujet, et les corrections ont ete ecrites sur eux.
 -- =====================================================================
 
 TRUNCATE inscription, protocole, programme, observation, tortue_tag, tortue, tag, observateur, site, habitat, organisation, espece, pays RESTART IDENTITY CASCADE;
