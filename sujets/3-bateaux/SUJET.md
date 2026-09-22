@@ -19,7 +19,9 @@
 
 ## Le schéma SQL et ses relations
 
-`A ◄─── B` se lit « B porte la clé étrangère vers A ».
+![Le schéma SQL du sujet des bateaux : douze tables, l'héritage bateau / bateau_civil / bateau_militaire à gauche, avec leurs colonnes, leurs clés et le pourcentage de NULL de chaque colonne](schema.svg)
+
+Le même schéma, en texte. `A ◄─── B` se lit « B porte la clé étrangère vers A ».
 
 ```
   pays ◄─── port ◄─── quai ◄─── escale ◄─── cargaison   1:N BORNE — 3 par escale

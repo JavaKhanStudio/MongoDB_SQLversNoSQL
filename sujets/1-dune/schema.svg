@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1595 650" width="1595" height="650" role="img" aria-label="Sujet 1 — Dune : schema relationnel, 9 tables">
+<style>
+  .fond { fill: #fbfdfc; }
+  .boite { fill: #ffffff; stroke: #c3d1cb; stroke-width: 1; }
+  .entete { fill: #e6edf4; }
+  .entete-liaison { fill: #efe7f4; }
+  .nul { fill: #b64d28; opacity: .10; }
+  .t { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 12px; fill: #0f221e; }
+  .ttable { font-weight: 700; fill: #2c5a86; }
+  .tliaison { fill: #6b3d86; }
+  .tdoux { fill: #6b7f78; }
+  .tcle { fill: #2c5a86; font-weight: 600; }
+  .tnul { fill: #b64d28; font-weight: 600; }
+  .titre { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #0f221e; }
+  .sous { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; fill: #4c635c; }
+  .lien { fill: none; stroke: #2c5a86; stroke-width: 1.4; }
+  .pointe { fill: #2c5a86; }
+  .card { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #2c5a86; }
+  @media (prefers-color-scheme: dark) {
+    .fond { fill: #0d1714; }
+    .boite { fill: #111e1a; stroke: #2e443a; }
+    .entete { fill: #16283a; }
+    .entete-liaison { fill: #2a1d33; }
+    .nul { fill: #e2865e; opacity: .16; }
+    .t { fill: #e4ede8; }
+    .ttable, .tcle, .card { fill: #83b0dc; }
+    .tliaison { fill: #c49be0; }
+    .tdoux { fill: #8fa39c; }
+    .tnul { fill: #e2865e; }
+    .titre { fill: #e4ede8; }
+    .sous { fill: #a3b7af; }
+    .lien { stroke: #83b0dc; }
+    .pointe { fill: #83b0dc; }
+  }
+</style>
+<defs><marker id="pointe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pointe"/></marker></defs>
+<rect class="fond" x="0" y="0" width="1595" height="650" rx="6"/>
+<text class="titre" x="24" y="30">Sujet 1 — Dune</text>
+<text class="sous" x="24" y="48">9 tables · 42 colonnes · 10 clés étrangères · 110 lignes — lu dans le catalogue PostgreSQL</text>
+<polyline class="lien" points="448.5,154.0 412.0,154.0 412.0,372.0 362.5,372.0" marker-end="url(#pointe)"/>
+<text class="card" x="443.5" y="150.0" text-anchor="end">N</text>
+<text class="card" x="367.5" y="368.0" text-anchor="start">1</text>
+<polyline class="lien" points="994.5,172.0 1031.0,172.0 1031.0,96.0 1080.5,96.0" marker-end="url(#pointe)"/>
+<text class="card" x="999.5" y="168.0" text-anchor="start">N</text>
+<text class="card" x="1075.5" y="92.0" text-anchor="end">1</text>
+<polyline class="lien" points="994.5,190.0 1031.0,190.0 1031.0,318.0 1080.5,318.0" marker-end="url(#pointe)"/>
+<text class="card" x="999.5" y="186.0" text-anchor="start">N</text>
+<text class="card" x="1075.5" y="314.0" text-anchor="end">1</text>
+<polyline class="lien" points="994.5,208.0 1044.0,208.0 1044.0,438.0 1080.5,438.0" marker-end="url(#pointe)"/>
+<text class="card" x="999.5" y="204.0" text-anchor="start">N</text>
+<text class="card" x="1075.5" y="434.0" text-anchor="end">1</text>
+<polyline class="lien" points="448.5,334.0 399.0,334.0 399.0,234.0 362.5,234.0" marker-end="url(#pointe)"/>
+<text class="card" x="443.5" y="330.0" text-anchor="end">N</text>
+<text class="card" x="367.5" y="230.0" text-anchor="start">1</text>
+<polyline class="lien" points="1532.2,216.0 1548.2,216.0 1548.2,96.0 1532.2,96.0" marker-end="url(#pointe)"/>
+<text class="card" x="1537.2" y="212.0" text-anchor="start">N</text>
+<text class="card" x="1537.2" y="92.0" text-anchor="start">1</text>
+<polyline class="lien" points="1532.2,234.0 1548.2,234.0 1548.2,318.0 1532.2,318.0" marker-end="url(#pointe)"/>
+<text class="card" x="1537.2" y="230.0" text-anchor="start">N</text>
+<text class="card" x="1537.2" y="314.0" text-anchor="start">1</text>
+<polyline class="lien" points="63.0,408.0 34.0,408.0 34.0,96.0 63.0,96.0" marker-end="url(#pointe)"/>
+<text class="card" x="58.0" y="404.0" text-anchor="end">N</text>
+<text class="card" x="58.0" y="92.0" text-anchor="end">1</text>
+<polyline class="lien" points="63.0,528.0 47.0,528.0 47.0,372.0 63.0,372.0" marker-end="url(#pointe)"/>
+<text class="card" x="58.0" y="524.0" text-anchor="end">N</text>
+<text class="card" x="58.0" y="368.0" text-anchor="end">1</text>
+<polyline class="lien" points="63.0,270.0 47.0,270.0 47.0,96.0 63.0,96.0" marker-end="url(#pointe)"/>
+<text class="card" x="58.0" y="266.0" text-anchor="end">N</text>
+<rect class="boite" x="63.0" y="58.0" width="299.5" height="108.0" rx="4"/>
+<path class="entete" d="M63.5,86.0 V62.5 Q63.5,58.5 67.5,58.5 H358.0 Q362.0,58.5 362.0,62.5 V86.0 Z"/>
+<text class="t ttable" x="75.0" y="76.5">region<tspan class="tdoux" font-weight="400"> · 5 lignes</tspan></text>
+<text class="t" x="75.0" y="100.0" font-weight="700">id</text>
+<text class="t tdoux" x="191.0" y="100.0">integer</text>
+<text class="t tcle" x="292.5" y="100.0">PK</text>
+<text class="t" x="75.0" y="118.0">nom</text>
+<text class="t tdoux" x="191.0" y="118.0">text</text>
+<text class="t tdoux" x="292.5" y="118.0">unique</text>
+<text class="t" x="75.0" y="136.0">hemisphere</text>
+<text class="t tdoux" x="191.0" y="136.0">text</text>
+<text class="t" x="75.0" y="154.0">indice_tempete</text>
+<text class="t tdoux" x="191.0" y="154.0">numeric(3,1)</text>
+<rect class="boite" x="63.0" y="196.0" width="299.5" height="108.0" rx="4"/>
+<path class="entete" d="M63.5,224.0 V200.5 Q63.5,196.5 67.5,196.5 H358.0 Q362.0,196.5 362.0,200.5 V224.0 Z"/>
+<text class="t ttable" x="75.0" y="214.5">ver<tspan class="tdoux" font-weight="400"> · 7 lignes</tspan></text>
+<text class="t" x="75.0" y="238.0" font-weight="700">id</text>
+<text class="t tdoux" x="191.0" y="238.0">integer</text>
+<text class="t tcle" x="292.5" y="238.0">PK</text>
+<text class="t" x="75.0" y="256.0">nom</text>
+<text class="t tdoux" x="191.0" y="256.0">text</text>
+<text class="t" x="75.0" y="274.0">region_id</text>
+<text class="t tdoux" x="191.0" y="274.0">integer</text>
+<text class="t tcle" x="292.5" y="274.0">→ region</text>
+<text class="t" x="75.0" y="292.0">statut</text>
+<text class="t tdoux" x="191.0" y="292.0">text</text>
+<rect class="boite" x="63.0" y="334.0" width="299.5" height="108.0" rx="4"/>
+<path class="entete" d="M63.5,362.0 V338.5 Q63.5,334.5 67.5,334.5 H358.0 Q362.0,334.5 362.0,338.5 V362.0 Z"/>
+<text class="t ttable" x="75.0" y="352.5">puits<tspan class="tdoux" font-weight="400"> · 10 lignes</tspan></text>
+<text class="t" x="75.0" y="376.0" font-weight="700">id</text>
+<text class="t tdoux" x="191.0" y="376.0">integer</text>
+<text class="t tcle" x="292.5" y="376.0">PK</text>
+<text class="t" x="75.0" y="394.0">code</text>
+<text class="t tdoux" x="191.0" y="394.0">text</text>
+<text class="t tdoux" x="292.5" y="394.0">unique</text>
+<text class="t" x="75.0" y="412.0">region_id</text>
+<text class="t tdoux" x="191.0" y="412.0">integer</text>
+<text class="t tcle" x="292.5" y="412.0">→ region</text>
+<text class="t" x="75.0" y="430.0">epuise</text>
+<text class="t tdoux" x="191.0" y="430.0">boolean</text>
+<rect class="boite" x="63.0" y="472.0" width="299.5" height="108.0" rx="4"/>
+<path class="entete" d="M63.5,500.0 V476.5 Q63.5,472.5 67.5,472.5 H358.0 Q362.0,472.5 362.0,476.5 V500.0 Z"/>
+<text class="t ttable" x="75.0" y="490.5">releve_vibration<tspan class="tdoux" font-weight="400"> · 30 lignes</tspan></text>
+<text class="t" x="75.0" y="514.0" font-weight="700">id</text>
+<text class="t tdoux" x="191.0" y="514.0">integer</text>
+<text class="t tcle" x="292.5" y="514.0">PK</text>
+<text class="t" x="75.0" y="532.0">puits_id</text>
+<text class="t tdoux" x="191.0" y="532.0">integer</text>
+<text class="t tcle" x="292.5" y="532.0">→ puits</text>
+<text class="t" x="75.0" y="550.0">mesure_le</text>
+<text class="t tdoux" x="191.0" y="550.0">timestamp</text>
+<text class="t" x="75.0" y="568.0">amplitude</text>
+<text class="t tdoux" x="191.0" y="568.0">numeric(5,2)</text>
+<rect class="boite" x="448.5" y="98.0" width="546.0" height="288.0" rx="4"/>
+<path class="entete" d="M449.0,126.0 V102.5 Q449.0,98.5 453.0,98.5 H990.0 Q994.0,98.5 994.0,102.5 V126.0 Z"/>
+<text class="t ttable" x="460.5" y="116.5">collecte<tspan class="tdoux" font-weight="400"> · 30 lignes</tspan></text>
+<text class="t" x="460.5" y="140.0" font-weight="700">id</text>
+<text class="t tdoux" x="641.8" y="140.0">integer</text>
+<text class="t tcle" x="743.2" y="140.0">PK</text>
+<text class="t" x="460.5" y="158.0">puits_id</text>
+<text class="t tdoux" x="641.8" y="158.0">integer</text>
+<text class="t tcle" x="743.2" y="158.0">→ puits</text>
+<text class="t" x="460.5" y="176.0">plateforme_minage_id</text>
+<text class="t tdoux" x="641.8" y="176.0">integer</text>
+<text class="t tcle" x="743.2" y="176.0">→ plateforme_minage</text>
+<text class="t" x="460.5" y="194.0">plateforme_transport_id</text>
+<text class="t tdoux" x="641.8" y="194.0">integer</text>
+<text class="t tcle" x="743.2" y="194.0">→ plateforme_transport</text>
+<text class="t" x="460.5" y="212.0">contremaitre_id</text>
+<text class="t tdoux" x="641.8" y="212.0">integer</text>
+<text class="t tcle" x="743.2" y="212.0">→ contremaitre</text>
+<text class="t" x="460.5" y="230.0">debut</text>
+<text class="t tdoux" x="641.8" y="230.0">timestamp</text>
+<text class="t" x="460.5" y="248.0">statut</text>
+<text class="t tdoux" x="641.8" y="248.0">text</text>
+<rect class="nul" x="449.5" y="253.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="266.0">tonnes_epice</text>
+<text class="t tdoux" x="641.8" y="266.0">numeric(6,2)</text>
+<text class="t tnul" x="982.5" y="266.0" text-anchor="end">NULL 37 %</text>
+<rect class="nul" x="449.5" y="271.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="284.0">purete_pct</text>
+<text class="t tdoux" x="641.8" y="284.0">numeric(4,1)</text>
+<text class="t tnul" x="982.5" y="284.0" text-anchor="end">NULL 37 %</text>
+<rect class="nul" x="449.5" y="289.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="302.0">duree_minutes</text>
+<text class="t tdoux" x="641.8" y="302.0">integer</text>
+<text class="t tnul" x="982.5" y="302.0" text-anchor="end">NULL 37 %</text>
+<rect class="nul" x="449.5" y="307.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="320.0">cause</text>
+<text class="t tdoux" x="641.8" y="320.0">text</text>
+<text class="t tnul" x="982.5" y="320.0" text-anchor="end">NULL 63 %</text>
+<rect class="nul" x="449.5" y="325.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="338.0">ver_id</text>
+<text class="t tdoux" x="641.8" y="338.0">integer</text>
+<text class="t tcle" x="743.2" y="338.0">→ ver</text>
+<text class="t tnul" x="982.5" y="338.0" text-anchor="end">NULL 87 %</text>
+<rect class="nul" x="449.5" y="343.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="356.0">materiel_perdu</text>
+<text class="t tdoux" x="641.8" y="356.0">boolean</text>
+<text class="t tnul" x="982.5" y="356.0" text-anchor="end">NULL 63 %</text>
+<rect class="nul" x="449.5" y="361.0" width="544.0" height="16"/>
+<text class="t" x="460.5" y="374.0">pertes_humaines</text>
+<text class="t tdoux" x="641.8" y="374.0">integer</text>
+<text class="t tnul" x="982.5" y="374.0" text-anchor="end">NULL 63 %</text>
+<rect class="boite" x="1080.5" y="58.0" width="451.8" height="90.0" rx="4"/>
+<path class="entete" d="M1081.0,86.0 V62.5 Q1081.0,58.5 1085.0,58.5 H1527.8 Q1531.8,58.5 1531.8,62.5 V86.0 Z"/>
+<text class="t ttable" x="1092.5" y="76.5">plateforme_minage<tspan class="tdoux" font-weight="400"> · 6 lignes</tspan></text>
+<text class="t" x="1092.5" y="100.0" font-weight="700">id</text>
+<text class="t tdoux" x="1273.8" y="100.0">integer</text>
+<text class="t tcle" x="1339.0" y="100.0">PK</text>
+<text class="t" x="1092.5" y="118.0">matricule</text>
+<text class="t tdoux" x="1273.8" y="118.0">text</text>
+<text class="t tdoux" x="1339.0" y="118.0">unique</text>
+<text class="t" x="1092.5" y="136.0">modele</text>
+<text class="t tdoux" x="1273.8" y="136.0">text</text>
+<rect class="boite" x="1080.5" y="178.0" width="451.8" height="72.0" rx="4"/>
+<path class="entete-liaison" d="M1081.0,206.0 V182.5 Q1081.0,178.5 1085.0,178.5 H1527.8 Q1531.8,178.5 1531.8,182.5 V206.0 Z"/>
+<text class="t ttable tliaison" x="1092.5" y="196.5">compatibilite<tspan class="tdoux" font-weight="400"> · 11 lignes</tspan></text>
+<text class="t tliaison" x="1520.2" y="196.5" text-anchor="end" font-weight="700">M:N</text>
+<text class="t" x="1092.5" y="220.0" font-weight="700">plateforme_minage_id</text>
+<text class="t tdoux" x="1273.8" y="220.0">integer</text>
+<text class="t tcle" x="1339.0" y="220.0">PK → plateforme_minage</text>
+<text class="t" x="1092.5" y="238.0" font-weight="700">plateforme_transport_id</text>
+<text class="t tdoux" x="1273.8" y="238.0">integer</text>
+<text class="t tcle" x="1339.0" y="238.0">PK → plateforme_transport</text>
+<rect class="boite" x="1080.5" y="280.0" width="451.8" height="90.0" rx="4"/>
+<path class="entete" d="M1081.0,308.0 V284.5 Q1081.0,280.5 1085.0,280.5 H1527.8 Q1531.8,280.5 1531.8,284.5 V308.0 Z"/>
+<text class="t ttable" x="1092.5" y="298.5">plateforme_transport<tspan class="tdoux" font-weight="400"> · 5 lignes</tspan></text>
+<text class="t" x="1092.5" y="322.0" font-weight="700">id</text>
+<text class="t tdoux" x="1273.8" y="322.0">integer</text>
+<text class="t tcle" x="1339.0" y="322.0">PK</text>
+<text class="t" x="1092.5" y="340.0">matricule</text>
+<text class="t tdoux" x="1273.8" y="340.0">text</text>
+<text class="t tdoux" x="1339.0" y="340.0">unique</text>
+<text class="t" x="1092.5" y="358.0">modele</text>
+<text class="t tdoux" x="1273.8" y="358.0">text</text>
+<rect class="boite" x="1080.5" y="400.0" width="451.8" height="108.0" rx="4"/>
+<path class="entete" d="M1081.0,428.0 V404.5 Q1081.0,400.5 1085.0,400.5 H1527.8 Q1531.8,400.5 1531.8,404.5 V428.0 Z"/>
+<text class="t ttable" x="1092.5" y="418.5">contremaitre<tspan class="tdoux" font-weight="400"> · 6 lignes</tspan></text>
+<text class="t" x="1092.5" y="442.0" font-weight="700">id</text>
+<text class="t tdoux" x="1273.8" y="442.0">integer</text>
+<text class="t tcle" x="1339.0" y="442.0">PK</text>
+<text class="t" x="1092.5" y="460.0">nom</text>
+<text class="t tdoux" x="1273.8" y="460.0">text</text>
+<text class="t" x="1092.5" y="478.0">maison</text>
+<text class="t tdoux" x="1273.8" y="478.0">text</text>
+<text class="t" x="1092.5" y="496.0">anciennete_annees</text>
+<text class="t tdoux" x="1273.8" y="496.0">integer</text>
+<text class="sous" x="24" y="614"><tspan class="card">N ──▸ 1</tspan>  la flèche part de la clé étrangère et vise la clé primaire   ·   <tspan class="card">PK</tspan> clé primaire   ·   <tspan class="card">1:1</tspan> sa clé primaire est une clé étrangère   ·   <tspan fill="#6b3d86" font-weight="700">M:N</tspan> table de liaison</text>
+<text class="sous" x="24" y="634"><tspan class="tnul" font-weight="700">NULL x %</tspan>  la colonne est vide sur x % des lignes : elle ne concerne pas toutes les lignes</text>
+</svg>
