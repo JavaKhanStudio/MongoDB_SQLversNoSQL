@@ -7,6 +7,9 @@
 //  Base de travail : bateaux_correction — pas bateaux, ou l'etudiant
 //  ecrit son propre modele.
 //
+//  Le modele, dessine : modele.svg, en vis-a-vis de schema.svg
+//  (python3 tools/modele_svg.py le redessine depuis la base chargee).
+//
 //  LE MODELE — douze tables deviennent quatre collections.
 //    bateaux      UNE seule collection pour les civils ET les militaires.
 //                 L'heritage en trois tables disparait : chaque document

@@ -8,6 +8,9 @@
 //  Base de travail : dune_correction — surtout PAS dune, ou l'etudiant
 //  ecrit son propre modele.
 //
+//  Le modele, dessine : modele.svg, en vis-a-vis de schema.svg
+//  (python3 tools/modele_svg.py le redessine depuis la base chargee).
+//
 //  LE MODELE
 //    regions              une region, et dedans ses puits et ses vers.
 //                         1:N bornes : cinq puits, sept vers, et ce sera tout.

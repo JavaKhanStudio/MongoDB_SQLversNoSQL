@@ -7,6 +7,9 @@
 //  Base de travail : tortues_correction — pas tortues, ou l'etudiant
 //  ecrit son propre modele.
 //
+//  Le modele, dessine : modele.svg, en vis-a-vis de schema.svg
+//  (python3 tools/modele_svg.py le redessine depuis la base chargee).
+//
 //  LE MODELE — treize tables deviennent quatre collections.
 //    tortues        le document central : la tortue, son espece copiee,
 //                   son habitat copie, ses mensurations en sous-document,

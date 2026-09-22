@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1624 582" width="1624" height="582" role="img" aria-label="Sujet 2 — Les tortues, la correction : modele document, 4 collections">
+<style>
+  .fond { fill: #fbfdfc; }
+  .boite { fill: #ffffff; stroke: #c3d1cb; stroke-width: 1; }
+  .entete { fill: #e6edf4; }
+  .entete-liaison { fill: #efe7f4; }
+  .nul { fill: #b64d28; opacity: .10; }
+  .t { font-family: ui-monospace, "SF Mono", Menlo, Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace; font-size: 12px; fill: #0f221e; }
+  .ttable { font-weight: 700; fill: #2c5a86; }
+  .tliaison { fill: #6b3d86; }
+  .tdoux { fill: #6b7f78; }
+  .tcle { fill: #2c5a86; font-weight: 600; }
+  .tnul { fill: #b64d28; font-weight: 600; }
+  .titre { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 19px; font-weight: 700; fill: #0f221e; }
+  .sous { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; fill: #4c635c; }
+  .lien { fill: none; stroke: #2c5a86; stroke-width: 1.4; }
+  .tirets { stroke-dasharray: 5 3; }
+  .pointe { fill: #2c5a86; }
+  .card { font-family: "Public Sans", "Helvetica Neue", Arial, sans-serif; font-size: 11px; font-weight: 700; fill: #2c5a86; }
+  @media (prefers-color-scheme: dark) {
+    .fond { fill: #0d1714; }
+    .boite { fill: #111e1a; stroke: #2e443a; }
+    .entete { fill: #16283a; }
+    .entete-liaison { fill: #2a1d33; }
+    .nul { fill: #e2865e; opacity: .16; }
+    .t { fill: #e4ede8; }
+    .ttable, .tcle, .card { fill: #83b0dc; }
+    .tliaison { fill: #c49be0; }
+    .tdoux { fill: #8fa39c; }
+    .tnul { fill: #e2865e; }
+    .titre { fill: #e4ede8; }
+    .sous { fill: #a3b7af; }
+    .lien { stroke: #83b0dc; }
+    .pointe { fill: #83b0dc; }
+  }
+</style>
+<defs><marker id="pointe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="pointe"/></marker></defs>
+<rect class="fond" x="0" y="0" width="1624" height="582" rx="6"/>
+<text class="titre" x="24" y="30">Sujet 2 — Les tortues, la correction</text>
+<text class="sous" x="24" y="48">4 collections · 187 documents — lu dans tortues_correction, la base que charge make tortues-verifier</text>
+<polyline class="lien" points="629.8,294.0 586.8,294.0 586.8,116.0 543.8,116.0" marker-end="url(#pointe)"/>
+<text class="card" x="624.8" y="290.0" text-anchor="end">ref</text>
+<polyline class="lien tirets" points="1197.5,420.0 1247.0,420.0 1247.0,116.0 1283.5,116.0" marker-end="url(#pointe)"/>
+<text class="card" x="1202.5" y="416.0" text-anchor="start">copie</text>
+<polyline class="lien" points="1197.5,366.0 1234.0,366.0 1234.0,218.0 1283.5,218.0" marker-end="url(#pointe)"/>
+<text class="card" x="1202.5" y="362.0" text-anchor="start">ref</text>
+<polyline class="lien" points="1561.2,236.0 1577.2,236.0 1577.2,116.0 1561.2,116.0" marker-end="url(#pointe)"/>
+<text class="card" x="1566.2" y="232.0" text-anchor="start">ref</text>
+<rect class="boite" x="63.0" y="78.0" width="480.8" height="234.0" rx="4"/>
+<path class="entete" d="M63.5,106.0 V82.5 Q63.5,78.5 67.5,78.5 H539.2 Q543.2,78.5 543.2,82.5 V106.0 Z"/>
+<text class="t ttable" x="75.0" y="96.5">programmes<tspan class="tdoux" font-weight="400"> · 8 documents</tspan></text>
+<text class="t" x="75.0" y="120.0" xml:space="preserve" font-weight="700">_id</text>
+<text class="t tdoux" x="212.8" y="120.0">string</text>
+<text class="t tdoux" x="270.8" y="120.0">= programme.acronyme</text>
+<text class="t" x="75.0" y="138.0" xml:space="preserve">nom</text>
+<text class="t tdoux" x="212.8" y="138.0">string</text>
+<text class="t" x="75.0" y="156.0" xml:space="preserve">statut</text>
+<text class="t tdoux" x="212.8" y="156.0">string</text>
+<text class="t" x="75.0" y="174.0" xml:space="preserve">organisation</text>
+<text class="t tdoux" x="212.8" y="174.0">{ }</text>
+<text class="t tdoux" x="270.8" y="174.0">← organisation + pays</text>
+<text class="t" x="75.0" y="192.0" xml:space="preserve">  nom</text>
+<text class="t tdoux" x="212.8" y="192.0">string</text>
+<text class="t" x="75.0" y="210.0" xml:space="preserve">  pays</text>
+<text class="t tdoux" x="212.8" y="210.0">string</text>
+<text class="t" x="75.0" y="228.0" xml:space="preserve">protocole</text>
+<text class="t tdoux" x="212.8" y="228.0">{ }</text>
+<text class="t tdoux" x="270.8" y="228.0">← table protocole (1:1)</text>
+<text class="t" x="75.0" y="246.0" xml:space="preserve">  intervalleJours</text>
+<text class="t tdoux" x="212.8" y="246.0">number</text>
+<text class="t" x="75.0" y="264.0" xml:space="preserve">  methodeMarquage</text>
+<text class="t tdoux" x="212.8" y="264.0">string</text>
+<rect class="nul" x="64.0" y="269.0" width="478.8" height="16"/>
+<text class="t" x="75.0" y="282.0" xml:space="preserve">especeCible</text>
+<text class="t tdoux" x="212.8" y="282.0">string</text>
+<text class="t tdoux" x="270.8" y="282.0">← espece, recopiée</text>
+<text class="t tnul" x="531.8" y="282.0" text-anchor="end">absent 25 %</text>
+<rect class="nul" x="64.0" y="287.0" width="478.8" height="16"/>
+<text class="t" x="75.0" y="300.0" xml:space="preserve">anneeFin</text>
+<text class="t tdoux" x="212.8" y="300.0">number</text>
+<text class="t tnul" x="531.8" y="300.0" text-anchor="end">absent 50 %</text>
+<rect class="boite" x="629.8" y="58.0" width="567.8" height="414.0" rx="4"/>
+<path class="entete" d="M630.2,86.0 V62.5 Q630.2,58.5 634.2,58.5 H1193.0 Q1197.0,58.5 1197.0,62.5 V86.0 Z"/>
+<text class="t ttable" x="641.8" y="76.5">tortues<tspan class="tdoux" font-weight="400"> · 139 documents</tspan></text>
+<text class="t" x="641.8" y="100.0" xml:space="preserve" font-weight="700">_id</text>
+<text class="t tdoux" x="801.2" y="100.0">number</text>
+<text class="t" x="641.8" y="118.0" xml:space="preserve">nom</text>
+<text class="t tdoux" x="801.2" y="118.0">string</text>
+<text class="t" x="641.8" y="136.0" xml:space="preserve">espece</text>
+<text class="t tdoux" x="801.2" y="136.0">{ }</text>
+<text class="t tdoux" x="924.5" y="136.0">← table espece, recopiée</text>
+<text class="t" x="641.8" y="154.0" xml:space="preserve">  nomScientifique</text>
+<text class="t tdoux" x="801.2" y="154.0">string</text>
+<text class="t" x="641.8" y="172.0" xml:space="preserve">  nomCommun</text>
+<text class="t tdoux" x="801.2" y="172.0">string</text>
+<text class="t" x="641.8" y="190.0" xml:space="preserve">  statutUicn</text>
+<text class="t tdoux" x="801.2" y="190.0">string</text>
+<text class="t" x="641.8" y="208.0" xml:space="preserve">mensurations</text>
+<text class="t tdoux" x="801.2" y="208.0">{ }</text>
+<text class="t tdoux" x="924.5" y="208.0">colonnes de tortue</text>
+<text class="t" x="641.8" y="226.0" xml:space="preserve">  longueurDossiereCm</text>
+<text class="t tdoux" x="801.2" y="226.0">number</text>
+<text class="t" x="641.8" y="244.0" xml:space="preserve">  poidsKg</text>
+<text class="t tdoux" x="801.2" y="244.0">number</text>
+<text class="t" x="641.8" y="262.0" xml:space="preserve">tags</text>
+<text class="t tdoux" x="801.2" y="262.0">[ string ] ×1–4</text>
+<text class="t tdoux" x="924.5" y="262.0">← tortue_tag + tag</text>
+<text class="t" x="641.8" y="280.0" xml:space="preserve">programmes</text>
+<text class="t tdoux" x="801.2" y="280.0">[ { } ] ×0–3</text>
+<text class="t tdoux" x="924.5" y="280.0">← table inscription</text>
+<text class="t" x="641.8" y="298.0" xml:space="preserve">  acronyme</text>
+<text class="t tdoux" x="801.2" y="298.0">string</text>
+<text class="t" x="641.8" y="316.0" xml:space="preserve">  dateInscription</text>
+<text class="t tdoux" x="801.2" y="316.0">date</text>
+<text class="t" x="641.8" y="334.0" xml:space="preserve">observations</text>
+<text class="t tdoux" x="801.2" y="334.0">[ { } ] ×0–10</text>
+<text class="t tdoux" x="924.5" y="334.0">← table observation</text>
+<text class="t" x="641.8" y="352.0" xml:space="preserve">  date</text>
+<text class="t tdoux" x="801.2" y="352.0">date</text>
+<text class="t" x="641.8" y="370.0" xml:space="preserve">  site</text>
+<text class="t tdoux" x="801.2" y="370.0">string</text>
+<text class="t" x="641.8" y="388.0" xml:space="preserve">  observateur</text>
+<text class="t tdoux" x="801.2" y="388.0">string</text>
+<text class="t tdoux" x="924.5" y="388.0">← table observateur</text>
+<text class="t" x="641.8" y="406.0" xml:space="preserve">  scoreSante</text>
+<text class="t tdoux" x="801.2" y="406.0">number</text>
+<rect class="nul" x="630.8" y="411.0" width="565.8" height="16"/>
+<text class="t" x="641.8" y="424.0" xml:space="preserve">habitat</text>
+<text class="t tdoux" x="801.2" y="424.0">{ }</text>
+<text class="t tnul" x="1185.5" y="424.0" text-anchor="end">absent 1 %</text>
+<text class="t" x="641.8" y="442.0" xml:space="preserve">  nom</text>
+<text class="t tdoux" x="801.2" y="442.0">string</text>
+<text class="t" x="641.8" y="460.0" xml:space="preserve">  aireProtegee</text>
+<text class="t tdoux" x="801.2" y="460.0">bool</text>
+<rect class="boite" x="1283.5" y="78.0" width="277.8" height="72.0" rx="4"/>
+<path class="entete" d="M1284.0,106.0 V82.5 Q1284.0,78.5 1288.0,78.5 H1556.8 Q1560.8,78.5 1560.8,82.5 V106.0 Z"/>
+<text class="t ttable" x="1295.5" y="96.5">habitats<tspan class="tdoux" font-weight="400"> · 12 documents</tspan></text>
+<text class="t" x="1295.5" y="120.0" xml:space="preserve" font-weight="700">_id</text>
+<text class="t tdoux" x="1397.0" y="120.0">string</text>
+<text class="t tdoux" x="1455.0" y="120.0">= habitat.nom</text>
+<text class="t" x="1295.5" y="138.0" xml:space="preserve">aireProtegee</text>
+<text class="t tdoux" x="1397.0" y="138.0">bool</text>
+<rect class="boite" x="1283.5" y="180.0" width="277.8" height="72.0" rx="4"/>
+<path class="entete" d="M1284.0,208.0 V184.5 Q1284.0,180.5 1288.0,180.5 H1556.8 Q1560.8,180.5 1560.8,184.5 V208.0 Z"/>
+<text class="t ttable" x="1295.5" y="198.5">sites<tspan class="tdoux" font-weight="400"> · 28 documents</tspan></text>
+<text class="t" x="1295.5" y="222.0" xml:space="preserve" font-weight="700">_id</text>
+<text class="t tdoux" x="1397.0" y="222.0">string</text>
+<text class="t tdoux" x="1455.0" y="222.0">= site.nom</text>
+<text class="t" x="1295.5" y="240.0" xml:space="preserve">habitat</text>
+<text class="t tdoux" x="1397.0" y="240.0">string</text>
+<text class="sous" x="24" y="506"><tspan class="card">ref ──▸</tspan>  la valeur est la clé d'un document d'ailleurs : le lire demande un $lookup ou une seconde requête</text>
+<text class="sous" x="24" y="526"><tspan class="card">copie ╌╌▸</tspan>  des champs d'un document d'ailleurs, recopiés ici : lus sans jointure, mais à réécrire aux deux endroits</text>
+<text class="sous" x="24" y="546"><tspan class="card">[ ] ×a–b</tspan>  tableau de a à b éléments   ·   <tspan class="card">{ }</tspan> sous-document, ses champs en retrait   ·   <tspan class="tdoux">← table</tspan> la table SQL qui vit maintenant là</text>
+<text class="sous" x="24" y="566"><tspan class="tnul" font-weight="700">absent x %</tspan>  le champ manque dans x % des documents — il n'y est pas, ce n'est pas un NULL</text>
+</svg>
