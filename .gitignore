@@ -8,3 +8,4 @@
 
 # L'outillage qui reste a la maison : rien de interne/ ne part chez les eleves.
 interne/
+__pycache__/
