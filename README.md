@@ -140,16 +140,3 @@ sujets/<n>-<sujet>/
 ```
 
 `make arreter` conserve les données, `make purger` efface les volumes.
-
----
-
-## Ce que l'exécution a appris
-
-| constat | où |
-|---|---|
-| `mongo:8.0` refuse de démarrer sur un noyau Linux ≥ 6.19 (SERVER-121912). Le contournement est `GLIBC_TUNABLES: glibc.pthread.rseq=1` dans l'environnement du service — le même que `MongoDB_ACID`. | `docker/docker-compose.yml` |
-| `psql --quiet` ne tait pas les `NOTICE` d'un `DROP … IF EXISTS`. Il faut `PGOPTIONS=-c client_min_messages=warning`, ou le `SET` en tête du fichier. | `Makefile`, `sujets/*/schema.sql` |
-| `pg_stat_user_tables.n_live_tup` est une estimation. Pour un compte exact et générique, `query_to_xml` sur un `count(*)` formaté. | `Makefile`, `sujets/relations.sql` |
-| `mongosh` n'a pas de `cat()` comme l'ancien shell : pour lire un fichier depuis un script, c'est `require("fs").readFileSync`. Une variable declaree par `--eval 'const X = 1'` est bien visible du `--file` qui suit. | `sujets/verifier.js`, `Makefile` |
-| `docker exec` **sans `-i`** ne transmet pas son entrée standard : le `cat > fichier` du bout de tuyau reçoit du vide, sans erreur. | `Makefile` |
-| Les données du sujet 2 ne sont pas inventées : elles sont tirées du jeu `MongoDB_Tortues` du cours, donc les étudiants retrouvent les tortues qu'ils ont déjà chargées pour la section « Indexing ». Les trous du jeu réel (une tortue sans habitat, deux jamais observées) sont conservés exprès. Le script qui a fabriqué `donnees.sql` ne fait pas partie du dépôt : il lit un jeu de données qui n'y est pas, et le relancer décalerait les six chiffres de contrôle, qui sont le test du sujet. | `sujets/2-tortues/donnees.sql` |
