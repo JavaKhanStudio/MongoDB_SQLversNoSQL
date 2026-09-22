@@ -18,7 +18,9 @@
 
 ## Le schéma SQL et ses relations
 
-`A ◄─── B` se lit « B porte la clé étrangère vers A ».
+![Le schéma SQL du sujet Dune : neuf tables, collecte au centre, avec leurs colonnes, leurs clés et le pourcentage de NULL de chaque colonne](schema.svg)
+
+Le même schéma, en texte. `A ◄─── B` se lit « B porte la clé étrangère vers A ».
 
 ```
   region  ◄─── ver

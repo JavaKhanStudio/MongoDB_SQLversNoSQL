@@ -23,7 +23,9 @@
 
 ## Le schéma SQL et ses relations
 
-`A ◄─── B` se lit « B porte la clé étrangère vers A ».
+![Le schéma SQL du sujet des tortues : treize tables autour de tortue, avec leurs colonnes, leurs clés et le pourcentage de NULL de chaque colonne](schema.svg)
+
+Le même schéma, en texte. `A ◄─── B` se lit « B porte la clé étrangère vers A ».
 
 ```
   pays  ◄─── organisation ◄─── programme ◄─── protocole    1:1 — jamais l'un sans l'autre
