@@ -35,7 +35,78 @@ make dune        # charge la premiere base ; puis tortues, puis bateaux
 Sous Podman rootless (Fedora) :
 `export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock` avant `make`.
 
-`make aide` liste tout.
+`make aide` liste tout. Sous Windows, voir [la section suivante](#sous-windows).
+
+---
+
+## Sous Windows
+
+Le `Makefile` veut un shell Unix. Il faut d'abord **Docker Desktop** installé et
+lancé, puis l'une des deux voies suivantes.
+
+### Voie recommandée : WSL 2
+
+Tout fonctionne tel quel, `make <sujet>-verifier` compris. Dans un PowerShell
+administrateur, une seule fois :
+
+```powershell
+wsl --install -d Ubuntu     # puis redemarrer
+```
+
+Dans Docker Desktop : *Settings → Resources → WSL integration*, cocher Ubuntu.
+Ensuite, dans le terminal Ubuntu :
+
+```bash
+sudo apt update && sudo apt install -y make git
+cd ~                        # cloner dans Linux, pas sous /mnt/c
+git clone https://github.com/JavaKhanStudio/MongoDB_SQLversNoSQL.git
+cd MongoDB_SQLversNoSQL
+make demarrer
+```
+
+Et la suite du README s'applique mot pour mot.
+
+### Sans WSL : PowerShell, sans `make`
+
+Chaque cible du `Makefile` n'est qu'une commande `docker`. Depuis le dossier
+du projet, dans PowerShell :
+
+| au lieu de | taper |
+|---|---|
+| `make demarrer` | `docker compose -f docker/docker-compose.yml up -d` |
+| `make sujets` | `Get-Content sujets/SUJETS.txt` |
+| `make mongo` | `docker exec -it sqlnosql-mongo mongosh` |
+| `make arreter` | `docker compose -f docker/docker-compose.yml down` |
+| `make purger` | `docker compose -f docker/docker-compose.yml down -v` |
+
+Pour un sujet — ici `dune` rangé dans `1-dune` ; remplacer par `tortues` et
+`2-tortues`, ou `bateaux` et `3-bateaux` :
+
+```powershell
+# make dune : jeter la base et la refaire
+docker exec sqlnosql-postgres psql -U postgres -c "DROP DATABASE IF EXISTS dune"
+docker exec sqlnosql-postgres psql -U postgres -c "CREATE DATABASE dune"
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d dune -f /projet/sujets/1-dune/schema.sql
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d dune -f /projet/sujets/1-dune/donnees.sql
+
+# make dune-schema
+docker exec sqlnosql-postgres psql -U postgres -q -d dune -f /projet/sujets/relations.sql
+
+# make dune-controle
+docker exec sqlnosql-postgres psql -U postgres -q -d dune -f /projet/sujets/1-dune/controle.sql
+
+# make dune-sql
+docker exec -it sqlnosql-postgres psql -U postgres -d dune
+```
+
+Les chemins `/projet/...` sont ceux **du conteneur** : le dépôt y est monté, on
+les écrit donc avec des `/`, même sous Windows.
+
+`make <sujet>-verifier` fait passer la sortie d'un conteneur dans l'autre ; il
+n'a pas d'équivalent PowerShell fiable. Pour la correction, passer par WSL.
+
+Git Bash n'est pas une bonne voie : il réécrit les chemins `/projet/...` en
+chemins Windows avant de les passer à `docker`, et plus rien ne se trouve.
 
 ---
 
