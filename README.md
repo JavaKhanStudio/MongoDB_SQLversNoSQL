@@ -138,7 +138,7 @@ pourquoi.
 | `make <sujet>-controle` | six séries de chiffres. Vrais sur le SQL, ils doivent rester vrais sur les documents : **c'est le test du sujet** |
 | `make <sujet>-sql` | un `psql` sur la base |
 | `make mongo` | un `mongosh` sur le serveur d'arrivée |
-| `make <sujet>-verifier` | **la correction**, sur la branche `correction` — `git switch correction` d'abord. Elle charge le modèle document de référence dans `<sujet>_correction` et repose les six questions à MongoDB. Six `OK`, ou un `KO` avec la ligne du SQL en face de celle du document. `CASSE=1` abîme volontairement un document, pour voir le vérificateur mordre |
+| `make <sujet>-verifier` | **la correction**, sur la branche `correction` — `git switch correction` d'abord. Elle charge le modèle document de référence dans `<sujet>_correction` et repose les six questions à MongoDB. Six `OK`, ou un `KO` avec la ligne du SQL en face de celle du document. `CASSE=1` abîme volontairement un document, pour voir le vérificateur mordre. Le modèle de référence y est aussi dessiné, en vis-à-vis du `schema.svg` de chaque sujet : `sujets/<sujet>/modele.svg` |
 
 L'énoncé de chaque sujet est son `SUJET.md` : le schéma commenté, ce qui a été
 ajouté ou retiré pour rendre la transformation intéressante, et les exercices.

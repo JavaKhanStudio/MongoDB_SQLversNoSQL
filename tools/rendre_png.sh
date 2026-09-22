@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Rend chaque sujets/*/schema.svg en PNG (Chrome headless) pour le relire.
+# Rend chaque sujets/*/*.svg (schema.svg, et modele.svg sur la branche correction) en PNG (Chrome headless) pour le relire.
 #   tools/rendre_png.sh [dossier_sortie]   (defaut : $TMPDIR/sqlnosql-rendu, hors depot)
 set -euo pipefail
 cd "$(dirname "$0")/.."
 sortie="${1:-${TMPDIR:-/tmp}/sqlnosql-rendu}"; mkdir -p "$sortie"
-for f in sujets/*/schema.svg; do
-  n=$(basename "$(dirname "$f")")
+for f in sujets/*/*.svg; do
+  n=$(basename "$(dirname "$f")")-$(basename "$f" .svg)
   w=$(grep -o 'width="[0-9]*"' "$f" | head -1 | tr -dc 0-9)
   h=$(grep -o 'height="[0-9]*"' "$f" | head -1 | tr -dc 0-9)
   for theme in light dark; do
