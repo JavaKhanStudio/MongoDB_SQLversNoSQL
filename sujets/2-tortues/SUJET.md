@@ -19,6 +19,19 @@
 - Le même domaine en Spring, JPA d'un côté et Spring Data Mongo de l'autre :
   [Spring_MongoDB_Vs_SQL](https://github.com/JavaKhanStudio/Spring_MongoDB_Vs_SQL)
 
+**Depuis le pack hors ligne** (le dossier avec le programme « Ouvrir », sans Docker),
+il n'y a ni `make` ni `git` : tout passe par le menu de la fenêtre du programme.
+Taper le numéro, puis Entrée.
+
+| au lieu de | dans le pack |
+|---|---|
+| `make tortues` | rien, la base est déjà chargée ; **6** la recharge telle qu'au départ |
+| `make tortues-sql` | **2** |
+| `make tortues-schema` | **2**, puis `\i sujets/relations.sql` (long : Espace pour la page suivante) |
+| `make tortues-controle` | **2**, puis `\i sujets/2-tortues/controle.sql` |
+| `make mongo` | **4**, puis `use tortues` |
+| `git switch correction`, `make tortues-verifier` | rien : la correction n'est pas dans le pack |
+
 ---
 
 ## Le schéma SQL et ses relations
@@ -126,6 +139,7 @@ Les six chiffres de `make tortues-controle` sont **inchangés**.
 ## Exercices
 
 Charger la base : `make tortues`. La base MongoDB s'appelle `tortues`.
+Dans le pack : la base est déjà chargée, **2** ouvre psql, et **4** ouvre mongosh, où taper `use tortues`.
 Chaque exercice part de la base SQL telle quelle : aucun ne lit ce qu'un autre a écrit.
 
 ### Exercice 1

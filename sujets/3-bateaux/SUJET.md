@@ -15,6 +15,19 @@
   puis `make bateaux-verifier` — elle repose les six chiffres à MongoDB
 - Le DDL : [`schema.sql`](schema.sql) · les données : [`donnees.sql`](donnees.sql)
 
+**Depuis le pack hors ligne** (le dossier avec le programme « Ouvrir », sans Docker),
+il n'y a ni `make` ni `git` : tout passe par le menu de la fenêtre du programme.
+Taper le numéro, puis Entrée.
+
+| au lieu de | dans le pack |
+|---|---|
+| `make bateaux` | rien, la base est déjà chargée ; **7** la recharge telle qu'au départ |
+| `make bateaux-sql` | **3** |
+| `make bateaux-schema` | **3**, puis `\i sujets/relations.sql` (long : Espace pour la page suivante) |
+| `make bateaux-controle` | **3**, puis `\i sujets/3-bateaux/controle.sql` |
+| `make mongo` | **4**, puis `use bateaux` |
+| `git switch correction`, `make bateaux-verifier` | rien : la correction n'est pas dans le pack |
+
 ---
 
 ## Le schéma SQL et ses relations
@@ -151,6 +164,7 @@ sont **inchangés**.
 ## Exercices
 
 Charger la base : `make bateaux`. La base MongoDB s'appelle `bateaux`.
+Dans le pack : la base est déjà chargée, **3** ouvre psql, et **4** ouvre mongosh, où taper `use bateaux`.
 Chaque exercice part de la base SQL telle quelle : aucun ne lit ce qu'un autre a écrit.
 
 ### Exercice 1
