@@ -38,6 +38,7 @@ Sous Podman rootless (Fedora) :
 `export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock` avant `make`.
 
 `make aide` liste tout. Sous Windows, voir [la section suivante](#sous-windows).
+Depuis le pack hors ligne, rien de tout cela : voir [Dans le pack hors ligne](#dans-le-pack-hors-ligne).
 
 ---
 
@@ -109,6 +110,28 @@ n'a pas d'équivalent PowerShell fiable. Pour la correction, passer par WSL.
 
 Git Bash n'est pas une bonne voie : il réécrit les chemins `/projet/...` en
 chemins Windows avant de les passer à `docker`, et plus rien ne se trouve.
+
+---
+
+## Dans le pack hors ligne
+
+Le pack est un dossier qui se suffit : PostgreSQL, MongoDB et les trois bases déjà
+chargées, sans Docker ni Internet. Il n'y a ni `make` ni `git` : on double-clique le
+programme « Ouvrir » de son système (voir `LISEZMOI.txt`), et tout passe par le menu
+de sa fenêtre. Taper le numéro, puis Entrée. On revient au menu avec `\q` dans psql
+et `exit` dans mongosh.
+
+| au lieu de | dans le pack |
+|---|---|
+| `make demarrer` | lancer le programme ; il démarre les deux serveurs |
+| `make sujets` | la page que le programme ouvre dans le navigateur |
+| `make <sujet>` | rien, la base est déjà chargée ; **5**, **6** ou **7** recharge dune, tortues ou bateaux telle qu'au départ |
+| `make <sujet>-sql` | **1**, **2** ou **3** : psql sur dune, tortues ou bateaux |
+| `make <sujet>-schema` | le même numéro, puis `\i sujets/relations.sql` (long : Espace pour la page suivante) |
+| `make <sujet>-controle` | le même numéro, puis `\i sujets/1-dune/controle.sql` (ou `2-tortues`, `3-bateaux`) |
+| `make mongo` | **4** : mongosh sur dune ; `use tortues` ou `use bateaux` pour changer de base |
+| `make arreter` | **0** ; les données restent pour le prochain lancement |
+| `make <sujet>-verifier`, `git switch correction` | rien : la correction n'est pas dans le pack |
 
 ---
 

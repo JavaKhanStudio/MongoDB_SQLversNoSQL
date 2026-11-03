@@ -14,6 +14,19 @@
   puis `make dune-verifier` — elle repose les six chiffres à MongoDB
 - Le DDL : [`schema.sql`](schema.sql) · les données : [`donnees.sql`](donnees.sql)
 
+**Depuis le pack hors ligne** (le dossier avec le programme « Ouvrir », sans Docker),
+il n'y a ni `make` ni `git` : tout passe par le menu de la fenêtre du programme.
+Taper le numéro, puis Entrée.
+
+| au lieu de | dans le pack |
+|---|---|
+| `make dune` | rien, la base est déjà chargée ; **5** la recharge telle qu'au départ |
+| `make dune-sql` | **1** |
+| `make dune-schema` | **1**, puis `\i sujets/relations.sql` (long : Espace pour la page suivante) |
+| `make dune-controle` | **1**, puis `\i sujets/1-dune/controle.sql` |
+| `make mongo` | **4** |
+| `git switch correction`, `make dune-verifier` | rien : la correction n'est pas dans le pack |
+
 ---
 
 ## Le schéma SQL et ses relations
@@ -132,6 +145,7 @@ sont toutes là, `compatibilite` aussi, `releve_vibration` aussi.
 
 Charger la base : `make dune`, puis ouvrir `make dune-sql` pour lire le SQL et
 `make mongo` pour écrire les documents. La base MongoDB s'appelle `dune`.
+Dans le pack : la base est déjà chargée, **1** ouvre psql, **4** ouvre mongosh.
 Chaque exercice part de la base SQL telle quelle : aucun ne lit ce qu'un autre a écrit.
 
 ### Exercice 1
