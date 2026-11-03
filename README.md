@@ -75,8 +75,8 @@ du projet, dans PowerShell :
 
 | au lieu de | taper |
 |---|---|
-| `make demarrer` | `docker compose -f docker/docker-compose.yml up -d` |
-| `make sujets` | `Get-Content sujets/SUJETS.txt` |
+| `make demarrer` | `docker compose -f docker/docker-compose.yml up -d --wait` |
+| `make sujets` | `Get-Content -Encoding UTF8 sujets/SUJETS.txt` |
 | `make mongo` | `docker exec -it sqlnosql-mongo mongosh` |
 | `make arreter` | `docker compose -f docker/docker-compose.yml down` |
 | `make purger` | `docker compose -f docker/docker-compose.yml down -v` |
