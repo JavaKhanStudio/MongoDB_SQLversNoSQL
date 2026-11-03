@@ -1,0 +1,20 @@
+docker compose -f docker/docker-compose.yml up -d --wait
+Get-Content -Encoding UTF8 sujets/SUJETS.txt
+docker exec sqlnosql-postgres psql -U postgres -c "DROP DATABASE IF EXISTS dune"
+docker exec sqlnosql-postgres psql -U postgres -c "CREATE DATABASE dune"
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d dune -f /projet/sujets/1-dune/schema.sql
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d dune -f /projet/sujets/1-dune/donnees.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d dune -f /projet/sujets/relations.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d dune -f /projet/sujets/1-dune/controle.sql
+docker exec sqlnosql-postgres psql -U postgres -c "DROP DATABASE IF EXISTS tortues"
+docker exec sqlnosql-postgres psql -U postgres -c "CREATE DATABASE tortues"
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d tortues -f /projet/sujets/2-tortues/schema.sql
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d tortues -f /projet/sujets/2-tortues/donnees.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d tortues -f /projet/sujets/relations.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d tortues -f /projet/sujets/2-tortues/controle.sql
+docker exec sqlnosql-postgres psql -U postgres -c "DROP DATABASE IF EXISTS bateaux"
+docker exec sqlnosql-postgres psql -U postgres -c "CREATE DATABASE bateaux"
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d bateaux -f /projet/sujets/3-bateaux/schema.sql
+docker exec sqlnosql-postgres psql -U postgres -v ON_ERROR_STOP=1 -q -d bateaux -f /projet/sujets/3-bateaux/donnees.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d bateaux -f /projet/sujets/relations.sql
+docker exec sqlnosql-postgres psql -U postgres -q -d bateaux -f /projet/sujets/3-bateaux/controle.sql

@@ -1,0 +1,9 @@
+docker exec sqlnosql-postgres psql -U postgres --quiet -d dune -f /projet/sujets/vers-json.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/dune-tables.json'
+docker exec sqlnosql-postgres psql -U postgres --quiet -d dune -f /projet/sujets/1-dune/controle.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/dune-attendu.txt'
+docker exec sqlnosql-mongo mongosh --quiet --eval 'const CASSE = 0' --file /projet/sujets/1-dune/correction.js
+docker exec sqlnosql-postgres psql -U postgres --quiet -d tortues -f /projet/sujets/vers-json.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/tortues-tables.json'
+docker exec sqlnosql-postgres psql -U postgres --quiet -d tortues -f /projet/sujets/2-tortues/controle.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/tortues-attendu.txt'
+docker exec sqlnosql-mongo mongosh --quiet --eval 'const CASSE = 0' --file /projet/sujets/2-tortues/correction.js
+docker exec sqlnosql-postgres psql -U postgres --quiet -d bateaux -f /projet/sujets/vers-json.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/bateaux-tables.json'
+docker exec sqlnosql-postgres psql -U postgres --quiet -d bateaux -f /projet/sujets/3-bateaux/controle.sql | docker exec -i sqlnosql-mongo sh -c 'cat > /tmp/bateaux-attendu.txt'
+docker exec sqlnosql-mongo mongosh --quiet --eval 'const CASSE = 0' --file /projet/sujets/3-bateaux/correction.js
