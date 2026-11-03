@@ -1,5 +1,7 @@
 # SQL vers NoSQL
 
+<p align="center"><img src="icon.png" width="220" alt="Un trois-mâts entre les dunes et la mer"></p>
+
 > Trois bases SQL complètes, chargées et interrogeables, dont on demande le modèle
 > document qui leur correspond. Accompagne la slide « SQL vers NoSQL » du deck
 > MongoDB, section « Exercices récapitulatif ». Les trois sujets se présentent et
